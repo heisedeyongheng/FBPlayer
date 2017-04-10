@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "HTTPServer.h"
 
 @interface UpLoadVC : BaseViewController
-
+{
+    HTTPServer * httpServer;
+}
 @end

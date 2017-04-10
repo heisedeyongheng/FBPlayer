@@ -7,16 +7,22 @@
 //
 
 #import "UpLoadVC.h"
+#import "MyHTTPConnection.h"
 
 @interface UpLoadVC ()
 
 @end
 
 @implementation UpLoadVC
-
+-(void)dealloc
+{
+    httpServer = nil;
+    [super dealloc];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initControls];
+    [self initHttpServer];
     // Do any additional setup after loading the view.
 }
 
@@ -30,4 +36,21 @@
     [super setNavBg:self title:@"传输" back:nil right:nil];
     [self setBaseBg:[UIImage imageNamed:@"img_mainBg"]];
 }
+-(void)initHttpServer
+{
+    httpServer = [[HTTPServer alloc] init];
+    [httpServer setType:@"_http._tcp."];
+    NSString * docRoot = [[[NSBundle mainBundle] pathForResource:@"upload" ofType:@"html" inDirectory:@"web"] stringByDeletingLastPathComponent];
+    [httpServer setDocumentRoot:docRoot];
+    
+    [httpServer setConnectionClass:[MyHTTPConnection class]];
+    
+    NSError *error = nil;
+    if(![httpServer start:&error])
+    {
+        DEBUG_NSLOG(@"Error starting HTTP Server: %@", error);
+    }
+
+}
+
 @end

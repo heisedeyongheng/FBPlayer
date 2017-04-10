@@ -180,8 +180,9 @@
         UILabel * label = (UILabel*)[btn viewWithTag:LABELTAG];
         UIImageView * image = (UIImageView*)[btn viewWithTag:IMGTAG];
         [btn setFrame:CGRectMake(i*_width, 0, _width, _height)];
-        [image setFrame:CGRectMake(0, 5, _width, _height)];//for supregirl
-        [image setCenter:CGPointMake(_width/2, (_height)/2)];
+        [image setFrame:CGRectMake(0, 5, _width, _height - 20 - 10)];
+        [image setContentMode:UIViewContentModeScaleAspectFit];
+        [image setCenter:CGPointMake(_width/2, (_height - 10)/2)];
         [image setImage:v.tabBarItem.image];
         [label setText:v.tabBarItem.title];
         [label setFrame:CGRectMake(0, _height-20, _width, 20)];
@@ -225,14 +226,10 @@
         UILabel * lab = (UILabel*)[btn viewWithTag:LABELTAG];
         [btn setImage:nil forState:UIControlStateNormal];
         [image setImage:v.tabBarItem.image];
-        [image setFrame:CGRectMake(0, 5, _width, _height)];//for supregirl
-        [image setCenter:CGPointMake(_width/2, (_height)/2)];
         [lab setTextColor:RGBA(255, 255, 255, 255)];
         if(self.currentSelectedIndex == i)
         {
             [image setImage:v.tabBarItem.selectedImage];
-            [image setFrame:CGRectMake(0, 5, _width, _height + 10)];//for supregirl
-            [image setCenter:CGPointMake(_width/2, (_height)/2 - 10)];
             [lab setTextColor:RGBA(222, 94, 96, 255)];
         }
     }
