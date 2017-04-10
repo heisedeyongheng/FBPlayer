@@ -70,9 +70,9 @@ AppDelegate * appDelegate;//全局访问对象
 
 -(void)initAllViewControl
 {
-    UINavigationController * playLisstNav = [self createController:[PlayListVC class] selectedImg:[UIImage imageNamed:@"img_foodIcon"] unSelectedImg:nil navBarHidden:NO title:@"视频" isARC:YES];
-    UINavigationController * uploadNav = [self createController:[UpLoadVC class] selectedImg:[UIImage imageNamed:@"img_knowledgeIcon"] unSelectedImg:nil navBarHidden:NO title:@"传输" isARC:YES];
-    UINavigationController * settingNav = [self createController:[SettingVC class] selectedImg:[UIImage imageNamed:@"img_clothesIcon"] unSelectedImg:nil navBarHidden:NO title:@"我的" isARC:YES];
+    UINavigationController * playLisstNav = [self createController:[PlayListVC class] selectedImg:[UIImage imageNamed:@"img_video_hig"] unSelectedImg:[UIImage imageNamed:@"img_video_nor"] navBarHidden:NO title:@"视频" isARC:YES];
+    UINavigationController * uploadNav = [self createController:[UpLoadVC class] selectedImg:[UIImage imageNamed:@"img_tran_hig"] unSelectedImg:[UIImage imageNamed:@"img_tran_nor"] navBarHidden:NO title:@"传输" isARC:YES];
+    UINavigationController * settingNav = [self createController:[SettingVC class] selectedImg:[UIImage imageNamed:@"img_my_hig"] unSelectedImg:[UIImage imageNamed:@"img_my_nor"] navBarHidden:NO title:@"我的" isARC:YES];
     
     pTabBar = [[SWTabBarController alloc] init];
     [pTabBar setTabbarDelegate:self];
