@@ -8,6 +8,7 @@
 
 #import "UpLoadVC.h"
 #import "MyHTTPConnection.h"
+#import "CusTool.h"
 
 @interface UpLoadVC ()
 
@@ -40,17 +41,19 @@
 {
     httpServer = [[HTTPServer alloc] init];
     [httpServer setType:@"_http._tcp."];
-    NSString * docRoot = [[[NSBundle mainBundle] pathForResource:@"upload" ofType:@"html" inDirectory:@"web"] stringByDeletingLastPathComponent];
+    NSString * docRoot = [[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html" inDirectory:@"web"] stringByDeletingLastPathComponent];
     [httpServer setDocumentRoot:docRoot];
     
     [httpServer setConnectionClass:[MyHTTPConnection class]];
     
+    [httpServer listeningPort];
     NSError *error = nil;
     if(![httpServer start:&error])
     {
         DEBUG_NSLOG(@"Error starting HTTP Server: %@", error);
     }
 
+    DEBUG_NSLOG(@"listen %@:%d",[CusTool deviceIPAdress],[httpServer listeningPort]);
 }
 
 @end

@@ -45,6 +45,7 @@
 		18B7BA1D1E9B5F7D00E956D3 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18B7BA011E9B5F7D00E956D3 /* README.txt */; };
 		18B7BA201E9B625800E956D3 /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7BA1F1E9B625800E956D3 /* MyHTTPConnection.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		18B7BA221E9B697000E956D3 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 18B7BA211E9B697000E956D3 /* web */; };
+		18B7BA251E9B6EBC00E956D3 /* CusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7BA241E9B6EBC00E956D3 /* CusTool.m */; };
 		C93DCBBB1E8AA5C8001E7A44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C93DCBBA1E8AA5C8001E7A44 /* main.m */; };
 		C93DCBBE1E8AA5C8001E7A44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C93DCBBD1E8AA5C8001E7A44 /* AppDelegate.m */; };
 		C93DCBC61E8AA5C8001E7A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93DCBC51E8AA5C8001E7A44 /* Assets.xcassets */; };
@@ -126,6 +127,8 @@
 		18B7BA1E1E9B625800E956D3 /* MyHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHTTPConnection.h; sourceTree = "<group>"; };
 		18B7BA1F1E9B625800E956D3 /* MyHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHTTPConnection.m; sourceTree = "<group>"; };
 		18B7BA211E9B697000E956D3 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
+		18B7BA231E9B6EBC00E956D3 /* CusTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CusTool.h; sourceTree = "<group>"; };
+		18B7BA241E9B6EBC00E956D3 /* CusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CusTool.m; sourceTree = "<group>"; };
 		C93DCBB61E8AA5C8001E7A44 /* FBPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93DCBBA1E8AA5C8001E7A44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C93DCBBC1E8AA5C8001E7A44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -361,6 +364,8 @@
 			children = (
 				C93DCBD41E8AA712001E7A44 /* SWTabBarController.h */,
 				C93DCBD51E8AA712001E7A44 /* SWTabBarController.m */,
+				18B7BA231E9B6EBC00E956D3 /* CusTool.h */,
+				18B7BA241E9B6EBC00E956D3 /* CusTool.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				C93DCBBB1E8AA5C8001E7A44 /* main.m in Sources */,
 				18B7BA181E9B5F7D00E956D3 /* DDFileLogger.m in Sources */,
 				18B7BA0F1E9B5F7D00E956D3 /* HTTPErrorResponse.m in Sources */,
+				18B7BA251E9B6EBC00E956D3 /* CusTool.m in Sources */,
 				18B7BA1A1E9B5F7D00E956D3 /* DDTTYLogger.m in Sources */,
 				18B7BA0D1E9B5F7D00E956D3 /* HTTPDataResponse.m in Sources */,
 				18B7BA071E9B5F7D00E956D3 /* HTTPMessage.m in Sources */,
