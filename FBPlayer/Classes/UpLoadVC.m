@@ -9,7 +9,9 @@
 #import "UpLoadVC.h"
 #import "MyHTTPConnection.h"
 #import "CusTool.h"
+#import "AppDelegate.h"
 
+extern AppDelegate * appDelegate;
 @interface UpLoadVC ()
 
 @end
@@ -18,6 +20,7 @@
 -(void)dealloc
 {
     httpServer = nil;
+    FREEOBJECT(uploadAddressLab);
     [super dealloc];
 }
 - (void)viewDidLoad {
@@ -26,7 +29,6 @@
     [self initHttpServer];
     // Do any additional setup after loading the view.
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -36,6 +38,16 @@
 {
     [super setNavBg:self title:@"传输" back:nil right:nil];
     [self setBaseBg:[UIImage imageNamed:@"img_mainBg"]];
+    
+    uploadAddressLab = [[UILabel alloc] init];
+    [uploadAddressLab setFrame:CGRectMake(20, appDelegate.screenHeight*0.2, appDelegate.screenWidth - 40, 120)];
+    [uploadAddressLab setBackgroundColor:[UIColor clearColor]];
+    [uploadAddressLab setTextColor:[UIColor whiteColor]];
+    [uploadAddressLab setFont:[UIFont systemFontOfSize:22]];
+    [uploadAddressLab setTextAlignment:NSTextAlignmentCenter];
+    [uploadAddressLab setNumberOfLines:0];
+    [uploadAddressLab setLineBreakMode:NSLineBreakByCharWrapping];
+    [self.view addSubview:uploadAddressLab];
 }
 -(void)initHttpServer
 {
@@ -54,6 +66,7 @@
     }
 
     DEBUG_NSLOG(@"listen %@:%d",[CusTool deviceIPAdress],[httpServer listeningPort]);
+    [uploadAddressLab setText:[NSString stringWithFormat:@"请在浏览器中输入如下地址：\n\nhttp://%@:%d",[CusTool deviceIPAdress],[httpServer listeningPort]]];
 }
 
 @end

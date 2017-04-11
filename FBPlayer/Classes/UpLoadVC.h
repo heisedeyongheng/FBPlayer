@@ -12,5 +12,6 @@
 @interface UpLoadVC : BaseViewController
 {
     HTTPServer * httpServer;
+    UILabel * uploadAddressLab;
 }
 @end

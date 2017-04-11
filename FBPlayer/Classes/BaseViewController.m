@@ -30,11 +30,16 @@ extern AppDelegate * appDelegate;
 {
     [super viewWillAppear:animated];
     [self.view bringSubviewToFront:navBarView];
+    if([self isKindOfClass:NSClassFromString(@"UpLoadVC")]){
+        [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    }
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-//    [[ComAirController defaultInstance] sendCommand:61 _commandL:61 _interval:0.02 sound:nil];
+    if([self isKindOfClass:NSClassFromString(@"UpLoadVC")]){
+        [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+    }
 }
 - (void)viewDidLoad
 {

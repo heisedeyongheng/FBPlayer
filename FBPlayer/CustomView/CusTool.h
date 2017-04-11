@@ -11,4 +11,5 @@
 @interface CusTool : NSObject
 
 + (NSString *)deviceIPAdress;
++(NSString*)uploadPath;
 @end

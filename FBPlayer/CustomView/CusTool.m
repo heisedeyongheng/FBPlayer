@@ -41,4 +41,23 @@
     freeifaddrs(interfaces);
     return address;
 }
+
++(NSString *)ReturnFilePath
+{
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory=[paths objectAtIndex:0];
+    return documentsDirectory;
+}
++(NSString *)ReturnLibFilePath
+{
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory=[paths objectAtIndex:0];
+    return documentsDirectory;
+}
+
++(NSString*)uploadPath
+{
+    NSString * docPath = [CusTool ReturnFilePath];
+    return [NSString stringWithFormat:@"%@/videoUpload/",docPath];
+}
 @end

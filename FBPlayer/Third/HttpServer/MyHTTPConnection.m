@@ -10,6 +10,10 @@
 #import "HTTPDynamicFileResponse.h"
 #import "HTTPFileResponse.h"
 
+
+#ifdef USER_CUS_TOOL_UPLOAD_PATH
+#import "CusTool.h"
+#endif
 // Log levels : off, error, warn, info, verbose
 // Other flags: trace
 static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE;
@@ -147,8 +151,12 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
         // it's either not a file part, or
 		// an empty form sent. we won't handle it.
 		return;
-	}    
-	NSString* uploadDirPath = [[config documentRoot] stringByAppendingPathComponent:@"upload"];
+	}
+#ifdef USER_CUS_TOOL_UPLOAD_PATH
+    NSString* uploadDirPath = [CusTool uploadPath];
+#else
+    NSString* uploadDirPath = [[config documentRoot] stringByAppendingPathComponent:@"upload"];
+#endif
 
 	BOOL isDir = YES;
 	if (![[NSFileManager defaultManager]fileExistsAtPath:uploadDirPath isDirectory:&isDir ]) {
