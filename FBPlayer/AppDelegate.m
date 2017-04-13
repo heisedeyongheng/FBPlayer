@@ -10,6 +10,8 @@
 #import "PlayListVC.h"
 #import "UpLoadVC.h"
 #import "SettingVC.h"
+#import "WebVC.h"
+#import "CusTool.h"
 #import "Contast.h"
 
 AppDelegate * appDelegate;//全局访问对象
@@ -73,10 +75,16 @@ AppDelegate * appDelegate;//全局访问对象
     UINavigationController * playLisstNav = [self createController:[PlayListVC class] selectedImg:[UIImage imageNamed:@"img_video_hig"] unSelectedImg:[UIImage imageNamed:@"img_video_nor"] navBarHidden:NO title:@"视频" isARC:YES];
     UINavigationController * uploadNav = [self createController:[UpLoadVC class] selectedImg:[UIImage imageNamed:@"img_tran_hig"] unSelectedImg:[UIImage imageNamed:@"img_tran_nor"] navBarHidden:NO title:@"传输" isARC:YES];
     UINavigationController * settingNav = [self createController:[SettingVC class] selectedImg:[UIImage imageNamed:@"img_my_hig"] unSelectedImg:[UIImage imageNamed:@"img_my_nor"] navBarHidden:NO title:@"我的" isARC:YES];
+    UINavigationController * webNav = [self createController:[SettingVC class] selectedImg:[UIImage imageNamed:@"img_web_hig"] unSelectedImg:[UIImage imageNamed:@"img_web_nor"] navBarHidden:NO title:@"浏览" isARC:YES];
     
+    NSString * isShowWeb = [CusTool getFlag:FLAG_KEY_ISWEB];
     pTabBar = [[SWTabBarController alloc] init];
     [pTabBar setTabbarDelegate:self];
-    NSArray * controllers = [[NSArray arrayWithObjects:playLisstNav,uploadNav,settingNav, nil] autorelease];
+    NSArray * controllers = nil;
+    if([isShowWeb isEqualToString:@"1"])
+        controllers = [[NSArray arrayWithObjects:playLisstNav,uploadNav,webNav,settingNav, nil] autorelease];
+    else
+        controllers = [[NSArray arrayWithObjects:playLisstNav,uploadNav,settingNav, nil] autorelease];
     pTabBar.viewControllers = controllers;
     isHiddenTabBar = NO;
     self.window.rootViewController = pTabBar;

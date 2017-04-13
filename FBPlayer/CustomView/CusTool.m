@@ -13,6 +13,34 @@
 
 @implementation CusTool
 
++(NSString *)ReturnFilePath
+{
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory=[paths objectAtIndex:0];
+    return documentsDirectory;
+}
++(NSString *)ReturnLibFilePath
+{
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory=[paths objectAtIndex:0];
+    return documentsDirectory;
+}
++(NSString*)flagFilePath
+{
+    NSString * docPath = [NSString stringWithFormat:@"%@/infofile/",[CusTool ReturnFilePath]];
+    [CusTool checkDirecotry:docPath];
+    return [NSString stringWithFormat:@"%@/flag.plist",docPath];
+}
++(void)checkDirecotry:(NSString*)dirPath
+{
+    BOOL isDir = NO;
+    if (![[NSFileManager defaultManager] fileExistsAtPath:dirPath isDirectory:&isDir ]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+}
+
+#pragma mark public
+
 + (NSString *)deviceIPAdress
 {
     NSString *address = @"an error occurred when obtaining ip address";
@@ -42,22 +70,32 @@
     return address;
 }
 
-+(NSString *)ReturnFilePath
-{
-    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory=[paths objectAtIndex:0];
-    return documentsDirectory;
-}
-+(NSString *)ReturnLibFilePath
-{
-    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory=[paths objectAtIndex:0];
-    return documentsDirectory;
-}
-
 +(NSString*)uploadPath
 {
     NSString * docPath = [CusTool ReturnFilePath];
     return [NSString stringWithFormat:@"%@/videoUpload/",docPath];
+}
++(void)setFlag:(NSString*)flagKey flagValue:(NSString*)flagValue
+{
+    NSString * flagFile = [CusTool flagFilePath];
+    NSMutableDictionary * dict = nil;
+    if([[NSFileManager defaultManager] fileExistsAtPath:flagFile]){
+        dict = [NSMutableDictionary dictionaryWithContentsOfFile:flagFile];
+    }
+    else{
+        dict = [NSMutableDictionary dictionaryWithCapacity:1];
+    }
+    [dict setValue:flagValue forKey:flagKey];
+    [dict writeToFile:flagFile atomically:YES];
+}
++(NSString*)getFlag:(NSString*)flagKey
+{
+    NSString * flagFile = [CusTool flagFilePath];
+    NSMutableDictionary * dict = nil;
+    if([[NSFileManager defaultManager] fileExistsAtPath:flagFile]){
+        dict = [NSMutableDictionary dictionaryWithContentsOfFile:flagFile];
+        return (NSString*)[dict valueForKey:flagKey];
+    }
+    return @"";
 }
 @end

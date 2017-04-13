@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#define FLAG_KEY_ISWEB   @"isShowWeb"
+#define FLAG_KEY_WEBURL  @"webUrl"
+
 @interface CusTool : NSObject
 
-+ (NSString *)deviceIPAdress;
++(NSString*)deviceIPAdress;
 +(NSString*)uploadPath;
++(NSString*)getFlag:(NSString*)flagKey;
++(void)setFlag:(NSString*)flagKey flagValue:(NSString*)flagValue;
 @end
