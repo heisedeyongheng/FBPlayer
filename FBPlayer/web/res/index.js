@@ -197,7 +197,7 @@ $(document).ready(function() {
     // limitConcurrentUploads: 2,
     // forceIframeTransport: true,
     
-    url: 'upload',
+    url: 'upload.html',
     type: 'POST',
     dataType: 'json',
     
@@ -311,6 +311,6 @@ $(document).ready(function() {
     _reload(_path);
   });
   
-  _reload("/");
+  // _reload("/");
   
 });
