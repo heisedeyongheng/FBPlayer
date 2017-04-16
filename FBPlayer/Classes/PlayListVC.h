@@ -8,6 +8,18 @@
 
 #import "BaseViewController.h"
 
+@interface VideoCell : UITableViewCell
+{
+    UIImageView * imageView;
+    UILabel * nameLab;
+    UILabel * timeLab;
+    NSString * curFile;
+}
+-(void)initControls;
+-(void)setData:(NSString*)videoFile;
++(CGFloat)cellH;
+@end
+
 @interface PlayListVC : BaseViewController<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray * videoFileList;

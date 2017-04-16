@@ -351,7 +351,7 @@ extern AppDelegate * appDelegate;
                 [title setBackgroundColor:[UIColor clearColor]];
                 [title setFrame:CGRectMake(0, 0, appDelegate.screenWidth/2, 44)];
                 [title setTextAlignment:NSTextAlignmentCenter];
-                [title setTextColor:RGBA(156, 70, 0, 255)];
+                [title setTextColor:RGBA(222, 94, 96, 255)];
                 [title setText:titleStrl];
                 [title setFont:[UIFont systemFontOfSize:20]];
                 target.navigationItem.titleView = title;

@@ -81,9 +81,11 @@ enum FFPlayState{
     unsigned char * audioData;
     int audioDataLen;
     int maxBufCount;
+    int64_t totalSeconds;
 }
 -(UIView*)videoView;
 -(UIImage*)getImage:(int)seconds;
+-(int64_t)allTimeLen;
 -(void)setPlayUrl:(NSString *)fileName;
 -(int)playState;
 -(void)Play;

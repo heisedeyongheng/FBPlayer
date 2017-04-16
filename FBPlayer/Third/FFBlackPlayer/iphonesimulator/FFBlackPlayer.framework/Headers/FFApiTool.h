@@ -12,6 +12,7 @@
 @interface FFApiTool : NSObject
 {
     FFControler * ffController;
+    NSMutableDictionary * tmpDict;
     dispatch_queue_t backQueue;
 }
 +(FFApiTool*)defaultInstance;
