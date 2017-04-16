@@ -405,4 +405,8 @@ extern AppDelegate * appDelegate;
         return 0;
     return navBarHeight;
 }
+-(CGFloat)mainH
+{
+    return appDelegate.screenHeight - 64 - 59;
+}
 @end

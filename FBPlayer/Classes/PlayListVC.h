@@ -8,6 +8,9 @@
 
 #import "BaseViewController.h"
 
-@interface PlayListVC : BaseViewController
-
+@interface PlayListVC : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+{
+    NSMutableArray * videoFileList;
+    UITableView * mainTable;
+}
 @end

@@ -52,4 +52,5 @@ struct videoBuf
 -(void)setUpVideo:(AVCodecContext *)videoCode FPS:(float)fps timeBaseUnit:(double)_timeBaseUnit isYuv:(BOOL)isYuv;
 -(void)setAudioCurPlayTime:(double)curPlayTime;
 -(void)addVideoData:(struct videoBuf *)buf;
++(UIImage*)convertFrameToImage:(AVFrame*)rgbFrame;
 @end

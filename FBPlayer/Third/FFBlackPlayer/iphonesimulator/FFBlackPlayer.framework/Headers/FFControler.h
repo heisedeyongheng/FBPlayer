@@ -64,6 +64,7 @@ enum FFPlayState{
     double audioTimeBase;
     int videoStream;
     int audioStream;
+    int pictureStream;
     BOOL isYUV;
     BOOL isVideo;
     BOOL isAudio;
@@ -82,12 +83,13 @@ enum FFPlayState{
     int maxBufCount;
 }
 -(UIView*)videoView;
+-(UIImage*)getImage:(int)seconds;
 -(void)setPlayUrl:(NSString *)fileName;
 -(int)playState;
 -(void)Play;
 -(void)Pause;
 -(void)Stop;
 -(void)setMaxBufCount:(int)count;
--(void)SeekTo:(int)seconds;
+-(void)SeekTo:(int)seconds;;
 +(NSString*)StateKey;
 @end

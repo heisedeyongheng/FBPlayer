@@ -25,5 +25,6 @@
 -(void)setNavBg:(UIViewController *)target title:(id)titleObj back:(id)backObj right:(id)rightObj;
 -(void)setBaseBg:(UIImage*)bg;
 -(UIImage*)getBaseBg;
+-(CGFloat)mainH;
 +(NSUInteger)Orientation;
 @end
