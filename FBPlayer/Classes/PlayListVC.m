@@ -158,4 +158,8 @@ extern AppDelegate * appDelegate;
 {
     return [VideoCell cellH];
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 @end

@@ -46,6 +46,7 @@
 		18B7BA201E9B625800E956D3 /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7BA1F1E9B625800E956D3 /* MyHTTPConnection.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		18B7BA221E9B697000E956D3 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 18B7BA211E9B697000E956D3 /* web */; };
 		18B7BA251E9B6EBC00E956D3 /* CusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7BA241E9B6EBC00E956D3 /* CusTool.m */; };
+		18BCD5181EA4C6280044AAB8 /* PlayDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BCD5171EA4C6280044AAB8 /* PlayDetailVC.m */; };
 		18EC96C81E9F2BB000B21BC6 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EC96C71E9F2BB000B21BC6 /* WebVC.m */; };
 		C9158A681EA35F7600F33ED0 /* FFBlackPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9158A601EA34A0000F33ED0 /* FFBlackPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9158A6E1EA373BC00F33ED0 /* FFBlackPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9158A601EA34A0000F33ED0 /* FFBlackPlayer.framework */; };
@@ -146,6 +147,8 @@
 		18B7BA211E9B697000E956D3 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
 		18B7BA231E9B6EBC00E956D3 /* CusTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CusTool.h; sourceTree = "<group>"; };
 		18B7BA241E9B6EBC00E956D3 /* CusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CusTool.m; sourceTree = "<group>"; };
+		18BCD5161EA4C6280044AAB8 /* PlayDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayDetailVC.h; sourceTree = "<group>"; };
+		18BCD5171EA4C6280044AAB8 /* PlayDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDetailVC.m; sourceTree = "<group>"; };
 		18EC96C61E9F2BB000B21BC6 /* WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVC.h; sourceTree = "<group>"; };
 		18EC96C71E9F2BB000B21BC6 /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
 		C9158A5E1EA34A0000F33ED0 /* FFBlackPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFBlackPlayer.framework; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 				C9AD50491E8BF7C600FC022E /* SettingVC.m */,
 				18EC96C61E9F2BB000B21BC6 /* WebVC.h */,
 				18EC96C71E9F2BB000B21BC6 /* WebVC.m */,
+				18BCD5161EA4C6280044AAB8 /* PlayDetailVC.h */,
+				18BCD5171EA4C6280044AAB8 /* PlayDetailVC.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -545,6 +550,7 @@
 				18B7BA0B1E9B5F7D00E956D3 /* MultipartMessageHeaderField.m in Sources */,
 				18B7BA1C1E9B5F7D00E956D3 /* DispatchQueueLogFormatter.m in Sources */,
 				18B7BA0C1E9B5F7D00E956D3 /* HTTPAsyncFileResponse.m in Sources */,
+				18BCD5181EA4C6280044AAB8 /* PlayDetailVC.m in Sources */,
 				C9AD504A1E8BF7C600FC022E /* SettingVC.m in Sources */,
 				18B7BA081E9B5F7D00E956D3 /* HTTPServer.m in Sources */,
 				18B7BA061E9B5F7D00E956D3 /* HTTPConnection.m in Sources */,
