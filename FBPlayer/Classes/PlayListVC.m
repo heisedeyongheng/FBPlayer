@@ -7,6 +7,7 @@
 //
 
 #import "PlayListVC.h"
+#import "PlayDetailVC.h"
 #import "CusTool.h"
 #import "FFApiTool.h"
 #import "AppDelegate.h"
@@ -89,7 +90,7 @@ extern AppDelegate * appDelegate;
 {
     [nameLab setText:videoFile];
     FREEOBJECT(curFile);
-    curFile = [[NSString stringWithFormat:@"%@%@",[CusTool uploadPath],videoFile] copy];
+    curFile = [[CusTool fileAddUploadPath:videoFile] copy];
     [[FFApiTool defaultInstance] getVideoThumbInBack:curFile];
 }
 +(CGFloat)cellH
@@ -160,6 +161,12 @@ extern AppDelegate * appDelegate;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger row = [indexPath row];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSString * videoFile = [videoFileList objectAtIndex:row];
+    PlayDetailVC * detailVC = [[PlayDetailVC alloc] initWithNibName:nil bundle:nil];
+    detailVC.videoPath = [CusTool fileAddUploadPath:videoFile];
+    [self.navigationController presentViewController:detailVC animated:YES completion:nil];
+    [detailVC release];
 }
 @end

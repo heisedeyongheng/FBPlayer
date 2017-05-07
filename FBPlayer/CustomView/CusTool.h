@@ -16,5 +16,6 @@
 +(NSString*)deviceIPAdress;
 +(NSString*)uploadPath;
 +(NSString*)getFlag:(NSString*)flagKey;
++(NSString*)fileAddUploadPath:(NSString*)fileName;
 +(void)setFlag:(NSString*)flagKey flagValue:(NSString*)flagValue;
 @end

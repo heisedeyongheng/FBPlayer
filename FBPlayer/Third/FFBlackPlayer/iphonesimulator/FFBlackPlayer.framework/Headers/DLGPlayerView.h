@@ -18,6 +18,7 @@
 
 @property (nonatomic) CGSize contentSize;
 @property (nonatomic) BOOL isYUV;
+@property (nonatomic) BOOL isReloading;
 @property (nonatomic) BOOL keepLastFrame;
 
 - (void)render:(DLGPlayerVideoFrame *)frame;

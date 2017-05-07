@@ -7,7 +7,16 @@
 //
 
 #import "BaseViewController.h"
+#import "FFControler.h"
 
 @interface PlayDetailVC : BaseViewController
-
+{
+    FFControler * playerController;
+    UIButton * backBtn;
+    UIView * topBar;
+    UIView * bottomBar;
+    
+    CGSize toSize;
+}
+@property(nonatomic,copy)NSString * videoPath;
 @end

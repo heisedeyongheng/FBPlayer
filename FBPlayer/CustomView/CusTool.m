@@ -75,6 +75,10 @@
     NSString * docPath = [CusTool ReturnFilePath];
     return [NSString stringWithFormat:@"%@/videoUpload/",docPath];
 }
++(NSString*)fileAddUploadPath:(NSString *)fileName
+{
+    return [NSString stringWithFormat:@"%@%@",[CusTool uploadPath],fileName];
+}
 +(void)setFlag:(NSString*)flagKey flagValue:(NSString*)flagValue
 {
     NSString * flagFile = [CusTool flagFilePath];
