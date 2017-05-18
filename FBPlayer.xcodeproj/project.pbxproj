@@ -475,6 +475,7 @@
 				TargetAttributes = {
 					C93DCBB51E8AA5C8001E7A44 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 56K7D2Z4PR;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -665,17 +666,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 健 王 (J35LZAFB73)";
+				DEVELOPMENT_TEAM = 56K7D2Z4PR;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphoneos",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphonesimulator",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphonesimulator/FFBlackPlayer.framework/Headers";
 				INFOPLIST_FILE = FBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szwm.FBPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "372bb516-83b0-40a3-9e97-e644fb0a28b9";
+				PROVISIONING_PROFILE_SPECIFIER = all;
 			};
 			name = Debug;
 		};
@@ -685,17 +690,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 健 王 (J35LZAFB73)";
+				DEVELOPMENT_TEAM = 56K7D2Z4PR;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphoneos",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphonesimulator",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphonesimulator/FFBlackPlayer.framework/Headers";
 				INFOPLIST_FILE = FBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szwm.FBPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "372bb516-83b0-40a3-9e97-e644fb0a28b9";
+				PROVISIONING_PROFILE_SPECIFIER = all;
 			};
 			name = Release;
 		};

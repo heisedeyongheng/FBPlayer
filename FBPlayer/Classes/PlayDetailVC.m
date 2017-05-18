@@ -53,17 +53,17 @@ extern AppDelegate * appDelegate;
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 
     toSize = size;
+    [playerController Pause];
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         // Place code here to perform animations during the rotation.
         // You can pass nil or leave this block empty if not necessary.
-        [playerController Pause];
         
     } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         // Code here will execute after the rotation has finished.
         // Equivalent to placing it in the deprecated method -[didRotateFromInterfaceOrientation:]
         
         if(toSize.width > toSize.height){
-            [playerController.videoView setFrame:CGRectMake(0, 0, appDelegate.screenHeight-10, appDelegate.screenWidth)];
+            [playerController.videoView setFrame:CGRectMake(0, 0, appDelegate.screenHeight, appDelegate.screenWidth)];
         }
         else{
             [playerController.videoView setFrame:CGRectMake(0, 0, appDelegate.screenWidth, appDelegate.screenHeight)];
