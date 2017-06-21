@@ -6,6 +6,13 @@
 //  Copyright (c) 2014年 Jietone Voice Tech Design Limited. All rights reserved.
 //
 
+#include <net/if.h>
+#include <net/if_dl.h>
+#include <sys/socket.h> // Per msqr
+#import <sys/sysctl.h>
+#import <mach/mach.h>
+
+
 #import "AppDelegate.h"
 #import "PlayListVC.h"
 #import "UpLoadVC.h"
@@ -39,6 +46,7 @@ AppDelegate * appDelegate;//全局访问对象
     
     [self initAllViewControl];
 //    [self initWelcome];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showMem:) userInfo:nil repeats:YES];
     [self showView:0];
     return YES;
 }
@@ -175,4 +183,62 @@ AppDelegate * appDelegate;//全局访问对象
     }
 }
 
+
+
+
+
+
+#pragma mark- show memory
+-(void)showMem:(NSTimer*)timer
+{
+    UILabel * memLabel = nil;
+    memLabel = (UILabel*)[self.window viewWithTag:1010];
+    if(memLabel == nil)
+    {
+        memLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 320, 20)];
+        memLabel.tag = 1010;
+        [memLabel setBackgroundColor:[UIColor clearColor]];
+        [self.window addSubview:memLabel];
+        [memLabel release];
+    }
+    [memLabel setText:[NSString stringWithFormat:@"aMem:%.2f uMem:%.2f",[self availableMemory],[self usedMemory]]];
+    [self.window bringSubviewToFront:memLabel];
+}
+
+
+// 获取当前设备可用内存(单位：MB）
+- (double)availableMemory
+{
+    vm_statistics_data_t vmStats;
+    mach_msg_type_number_t infoCount = HOST_VM_INFO_COUNT;
+    kern_return_t kernReturn = host_statistics(mach_host_self(),
+                                               HOST_VM_INFO,
+                                               (host_info_t)&vmStats,
+                                               &infoCount);
+    
+    if (kernReturn != KERN_SUCCESS) {
+        return NSNotFound;
+    }
+    
+    return ((vm_page_size *vmStats.free_count) / 1024.0) / 1024.0;
+}
+
+
+// 获取当前任务所占用的内存（单位：MB）
+- (double)usedMemory
+{
+    task_basic_info_data_t taskInfo;
+    mach_msg_type_number_t infoCount = TASK_BASIC_INFO_COUNT;
+    kern_return_t kernReturn = task_info(mach_task_self(),
+                                         TASK_BASIC_INFO,
+                                         (task_info_t)&taskInfo,
+                                         &infoCount);
+    
+    if (kernReturn != KERN_SUCCESS
+        ) {
+        return NSNotFound;
+    }
+    
+    return taskInfo.resident_size / 1024.0 / 1024.0;
+}
 @end

@@ -64,8 +64,11 @@ extern AppDelegate * appDelegate;
     {
         DEBUG_NSLOG(@"Error starting HTTP Server: %@", error);
     }
-
+    
     DEBUG_NSLOG(@"listen %@:%d",[CusTool deviceIPAdress],[httpServer listeningPort]);
+    NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%d",[CusTool deviceIPAdress],[httpServer listeningPort]]];
+    NSString * t = [[NSString alloc] initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+    DEBUG_NSLOG(@"%@",t);
     [uploadAddressLab setText:[NSString stringWithFormat:@"请在浏览器中输入如下地址：\n\nhttp://%@:%d",[CusTool deviceIPAdress],[httpServer listeningPort]]];
 }
 

@@ -63,7 +63,7 @@ extern AppDelegate * appDelegate;
         // Equivalent to placing it in the deprecated method -[didRotateFromInterfaceOrientation:]
         
         if(toSize.width > toSize.height){
-            [playerController.videoView setFrame:CGRectMake(0, 0, appDelegate.screenHeight-10, appDelegate.screenWidth)];
+            [playerController.videoView setFrame:CGRectMake(0, 0, appDelegate.screenHeight, appDelegate.screenWidth)];
         }
         else{
             [playerController.videoView setFrame:CGRectMake(0, 0, appDelegate.screenWidth, appDelegate.screenHeight)];
@@ -77,7 +77,6 @@ extern AppDelegate * appDelegate;
 -(void)initControls
 {
     DEBUG_NSLOG(@"视频地址：%@",self.videoPath);
-    [self.view setBackgroundColor:[UIColor redColor]];
     [self.view.layer setMasksToBounds:YES];
     playerController = [[FFControler alloc] initWithFrame:CGRectMake(0, 0, appDelegate.screenWidth, appDelegate.screenWidth)];
     [playerController setPlayUrl:self.videoPath];

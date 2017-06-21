@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AudioPlayer.h</key>
 		<data>
-		1vI2udN1S6SU566tyNbArrh/M5U=
+		lLwt5f+YDHQf17YYJUdyFF4AEdU=
 		</data>
 		<key>Headers/DLGPlayerFrame.h</key>
 		<data>
@@ -454,7 +454,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4jm0egtXYybmoudW+YNbA8wPBeA=
+		JZA/K0XFfS4r0vgVLmS2dEJ+yO8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -467,11 +467,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1vI2udN1S6SU566tyNbArrh/M5U=
+			lLwt5f+YDHQf17YYJUdyFF4AEdU=
 			</data>
 			<key>hash2</key>
 			<data>
-			wbk8rA0mkjS26rmFPZS7n3bElNupAnSO3xmwLwvZ/zk=
+			tIFBqvwBe/Dlf8aY+XNKKuzZkvsprMKUA29bTAGV2QY=
 			</data>
 		</dict>
 		<key>Headers/DLGPlayerFrame.h</key>
