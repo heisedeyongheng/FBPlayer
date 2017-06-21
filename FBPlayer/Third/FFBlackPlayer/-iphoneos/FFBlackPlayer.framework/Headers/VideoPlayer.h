@@ -24,6 +24,9 @@ struct videoBuf
 };
 
 
+@protocol VideoPlayerDelegate <NSObject>
+-(void)onPlayFrame:(double)curSeconds;
+@end
 
 @interface VideoPlayer : UIView
 {
@@ -36,8 +39,10 @@ struct videoBuf
     NSTimer * showTimer;
     dispatch_queue_t queue;
     dispatch_semaphore_t vPlayLock;
-    NSTimeInterval lastPts;
-    NSTimeInterval lastDur;
+    int64_t lastPts;
+    int64_t lastDur;
+    
+    BOOL isAutoPlay;//是否自动根据fps播放，适用于无音频轨道
     
     double FPS;
     double timeBaseUnit;
@@ -45,11 +50,13 @@ struct videoBuf
     struct videoBuf * videoBufQueue;
 }
 @property int videoBufCount;
+@property(nonatomic,assign)id<VideoPlayerDelegate> delegate;
 -(void)start;
 -(void)pause;
 -(void)stop;
 -(void)clearLinkBuf;
--(void)setUpVideo:(AVCodecContext *)videoCode FPS:(float)fps timeBaseUnit:(double)_timeBaseUnit isYuv:(BOOL)isYuv;
+-(void)setUpVideo:(AVCodecContext *)videoCode FPS:(float)fps timeBaseUnit:(double)_timeBaseUnit isYuv:(BOOL)isYuv isAutoPlay:(BOOL)_isAutoPlay;
+-(void)setIsAutoPlay:(BOOL)_isAutoPlay;
 -(void)setAudioCurPlayTime:(double)curPlayTime;
 -(void)addVideoData:(struct videoBuf *)buf;
 +(UIImage*)convertFrameToImage:(AVFrame*)rgbFrame;

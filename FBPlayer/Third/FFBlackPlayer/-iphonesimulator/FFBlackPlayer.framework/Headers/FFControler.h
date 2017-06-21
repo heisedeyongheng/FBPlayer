@@ -41,6 +41,11 @@
 
 @end
 
+
+@protocol FFControlerDelegate <NSObject>
+-(void)onPlayTime:(double)playTime totalSeconds:(double)totalSeconds;
+@end
+
 enum FFPlayState{
     Playing = 1,
     Initing,
@@ -49,7 +54,7 @@ enum FFPlayState{
     Seeking
 };
 
-@interface FFControler : UIView<AudioPlayerDelegate>
+@interface FFControler : UIView<AudioPlayerDelegate,VideoPlayerDelegate>
 {
     //ffmpeg
     AVFormatContext *pFormatCtx;
@@ -83,6 +88,7 @@ enum FFPlayState{
     int maxBufCount;
     int64_t totalSeconds;
 }
+@property(nonatomic,assign)id<FFControlerDelegate> delegate;
 -(UIView*)videoView;
 -(UIImage*)getImage:(int)seconds;
 -(int64_t)allTimeLen;

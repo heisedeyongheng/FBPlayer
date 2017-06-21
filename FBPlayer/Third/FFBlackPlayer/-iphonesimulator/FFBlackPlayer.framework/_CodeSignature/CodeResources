@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AudioPlayer.h</key>
 		<data>
-		1vI2udN1S6SU566tyNbArrh/M5U=
+		lLwt5f+YDHQf17YYJUdyFF4AEdU=
 		</data>
 		<key>Headers/DLGPlayerFrame.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/FFControler.h</key>
 		<data>
-		mk4Nt0uq8tgiLKZg5DoxvdkFQNQ=
+		A/Pn55wSBtTgoGaNXq90/+7U3Q0=
 		</data>
 		<key>Headers/ISSBufQueue.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/VideoPlayer.h</key>
 		<data>
-		ZzMHTLa1o0WNczqemTVZheLM81Y=
+		s7PhQgFQyKPhCVu//Q+215S1O5o=
 		</data>
 		<key>Headers/avcodec.h</key>
 		<data>
@@ -454,7 +454,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4jm0egtXYybmoudW+YNbA8wPBeA=
+		JZA/K0XFfS4r0vgVLmS2dEJ+yO8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -467,11 +467,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1vI2udN1S6SU566tyNbArrh/M5U=
+			lLwt5f+YDHQf17YYJUdyFF4AEdU=
 			</data>
 			<key>hash2</key>
 			<data>
-			wbk8rA0mkjS26rmFPZS7n3bElNupAnSO3xmwLwvZ/zk=
+			tIFBqvwBe/Dlf8aY+XNKKuzZkvsprMKUA29bTAGV2QY=
 			</data>
 		</dict>
 		<key>Headers/DLGPlayerFrame.h</key>
@@ -555,11 +555,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mk4Nt0uq8tgiLKZg5DoxvdkFQNQ=
+			A/Pn55wSBtTgoGaNXq90/+7U3Q0=
 			</data>
 			<key>hash2</key>
 			<data>
-			SFZMBICRpaQEeWFwAx9oesxtWv8sb7IjlN+JYKvCZmk=
+			zw58i7W9GNI7XzNgVXnxIQJN4f4SOvGpVFtrTBaLmQ4=
 			</data>
 		</dict>
 		<key>Headers/ISSBufQueue.h</key>
@@ -588,11 +588,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZzMHTLa1o0WNczqemTVZheLM81Y=
+			s7PhQgFQyKPhCVu//Q+215S1O5o=
 			</data>
 			<key>hash2</key>
 			<data>
-			QuL/4pV7e9yCvRGoL05zO8dEL8G1IgMuNLd7muP/LcQ=
+			mPAN/MDK3QlhlK/0mF56VTMgTXjq0UIGV61kulMhqI8=
 			</data>
 		</dict>
 		<key>Headers/avcodec.h</key>

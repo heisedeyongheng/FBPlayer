@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <AudioToolbox/AudioFile.h>
+#import <AVFoundation/AVFoundation.h>
 #import <libavcodec/avcodec.h>
 #define NUM_BUFFERS 3
 struct bufObj

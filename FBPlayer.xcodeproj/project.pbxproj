@@ -54,14 +54,14 @@
 		C93DCBD61E8AA712001E7A44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93DCBD21E8AA712001E7A44 /* ViewController.m */; };
 		C93DCBD71E8AA712001E7A44 /* SWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93DCBD51E8AA712001E7A44 /* SWTabBarController.m */; };
 		C93DCBDA1E8AA742001E7A44 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93DCBD91E8AA742001E7A44 /* BaseViewController.m */; };
-		C94D03F11EF02E4200E33164 /* FFBlackPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9158A5E1EA34A0000F33ED0 /* FFBlackPlayer.framework */; };
-		C94D03F21EF02E4200E33164 /* FFBlackPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9158A5E1EA34A0000F33ED0 /* FFBlackPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C95DA8701E9A6C5E00B06069 /* img_tabBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = C95DA86F1E9A6C5E00B06069 /* img_tabBarBg.png */; };
 		C95DA8721E9A70A800B06069 /* img_navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = C95DA8711E9A70A800B06069 /* img_navbar.png */; };
 		C95DA8751E9A738100B06069 /* img_mainBg.png in Resources */ = {isa = PBXBuildFile; fileRef = C95DA8741E9A738100B06069 /* img_mainBg.png */; };
 		C9AD50441E8BF7A000FC022E /* PlayListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AD50431E8BF7A000FC022E /* PlayListVC.m */; };
 		C9AD50471E8BF7B700FC022E /* UpLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AD50461E8BF7B700FC022E /* UpLoadVC.m */; };
 		C9AD504A1E8BF7C600FC022E /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AD50491E8BF7C600FC022E /* SettingVC.m */; };
+		C9E1D1651EFAC0FA00FB7EC2 /* FFBlackPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E1D1621EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */; };
+		C9E1D1661EFAC0FA00FB7EC2 /* FFBlackPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E1D1641EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,7 +71,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C94D03F21EF02E4200E33164 /* FFBlackPlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,8 +150,6 @@
 		18BCD5171EA4C6280044AAB8 /* PlayDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDetailVC.m; sourceTree = "<group>"; };
 		18EC96C61E9F2BB000B21BC6 /* WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVC.h; sourceTree = "<group>"; };
 		18EC96C71E9F2BB000B21BC6 /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
-		C9158A5E1EA34A0000F33ED0 /* FFBlackPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFBlackPlayer.framework; sourceTree = "<group>"; };
-		C9158A601EA34A0000F33ED0 /* FFBlackPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFBlackPlayer.framework; sourceTree = "<group>"; };
 		C93DCBB61E8AA5C8001E7A44 /* FBPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93DCBBA1E8AA5C8001E7A44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C93DCBBC1E8AA5C8001E7A44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -175,6 +172,8 @@
 		C9AD50461E8BF7B700FC022E /* UpLoadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpLoadVC.m; sourceTree = "<group>"; };
 		C9AD50481E8BF7C600FC022E /* SettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingVC.h; sourceTree = "<group>"; };
 		C9AD50491E8BF7C600FC022E /* SettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingVC.m; sourceTree = "<group>"; };
+		C9E1D1621EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFBlackPlayer.framework; sourceTree = "<group>"; };
+		C9E1D1641EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFBlackPlayer.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C94D03F11EF02E4200E33164 /* FFBlackPlayer.framework in Frameworks */,
+				C9E1D1651EFAC0FA00FB7EC2 /* FFBlackPlayer.framework in Frameworks */,
+				C9E1D1661EFAC0FA00FB7EC2 /* FFBlackPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,26 +329,10 @@
 		C9158A5C1EA34A0000F33ED0 /* FFBlackPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				C9158A5D1EA34A0000F33ED0 /* iphoneos */,
-				C9158A5F1EA34A0000F33ED0 /* iphonesimulator */,
+				C9E1D1611EFAC0FA00FB7EC2 /* -iphoneos */,
+				C9E1D1631EFAC0FA00FB7EC2 /* -iphonesimulator */,
 			);
 			path = FFBlackPlayer;
-			sourceTree = "<group>";
-		};
-		C9158A5D1EA34A0000F33ED0 /* iphoneos */ = {
-			isa = PBXGroup;
-			children = (
-				C9158A5E1EA34A0000F33ED0 /* FFBlackPlayer.framework */,
-			);
-			path = iphoneos;
-			sourceTree = "<group>";
-		};
-		C9158A5F1EA34A0000F33ED0 /* iphonesimulator */ = {
-			isa = PBXGroup;
-			children = (
-				C9158A601EA34A0000F33ED0 /* FFBlackPlayer.framework */,
-			);
-			path = iphonesimulator;
 			sourceTree = "<group>";
 		};
 		C93DCBAD1E8AA5C7001E7A44 = {
@@ -443,6 +427,22 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		C9E1D1611EFAC0FA00FB7EC2 /* -iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				C9E1D1621EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */,
+			);
+			path = "-iphoneos";
+			sourceTree = "<group>";
+		};
+		C9E1D1631EFAC0FA00FB7EC2 /* -iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				C9E1D1641EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */,
+			);
+			path = "-iphonesimulator";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -475,11 +475,7 @@
 				TargetAttributes = {
 					C93DCBB51E8AA5C8001E7A44 = {
 						CreatedOnToolsVersion = 8.1;
-<<<<<<< HEAD
 						DevelopmentTeam = X56ZKE53W5;
-=======
-						DevelopmentTeam = 56K7D2Z4PR;
->>>>>>> origin/master
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -681,11 +677,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/-iphoneos",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/-iphonesimulator",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphoneos/FFBlackPlayer.framework/Headers",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphonesimulator/FFBlackPlayer.framework/Headers",
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)/FFBlackPlayer.framework/Headers";
 				INFOPLIST_FILE = FBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szwm.FBPlayer;
@@ -708,11 +703,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/-iphoneos",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/-iphonesimulator",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphoneos/FFBlackPlayer.framework/Headers",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphonesimulator/FFBlackPlayer.framework/Headers",
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)/FFBlackPlayer.framework/Headers";
 				INFOPLIST_FILE = FBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szwm.FBPlayer;
