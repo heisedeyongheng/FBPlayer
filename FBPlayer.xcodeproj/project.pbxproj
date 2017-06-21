@@ -475,7 +475,11 @@
 				TargetAttributes = {
 					C93DCBB51E8AA5C8001E7A44 = {
 						CreatedOnToolsVersion = 8.1;
+<<<<<<< HEAD
 						DevelopmentTeam = X56ZKE53W5;
+=======
+						DevelopmentTeam = 56K7D2Z4PR;
+>>>>>>> origin/master
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -675,8 +679,8 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphoneos",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphonesimulator",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphoneos/FFBlackPlayer.framework/Headers",
@@ -702,8 +706,8 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphoneos",
-					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphonesimulator",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/iphoneos/FFBlackPlayer.framework/Headers",

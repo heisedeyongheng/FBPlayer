@@ -1,0 +1,6 @@
+framework module FFBlackPlayer {
+  umbrella header "FFBlackPlayer.h"
+
+  export *
+  module * { export * }
+}

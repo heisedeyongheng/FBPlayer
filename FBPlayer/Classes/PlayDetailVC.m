@@ -53,10 +53,10 @@ extern AppDelegate * appDelegate;
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 
     toSize = size;
+    [playerController Pause];
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         // Place code here to perform animations during the rotation.
         // You can pass nil or leave this block empty if not necessary.
-        [playerController Pause];
         
     } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         // Code here will execute after the rotation has finished.
