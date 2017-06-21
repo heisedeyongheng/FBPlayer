@@ -82,4 +82,10 @@ extern AppDelegate * appDelegate;
     [playerController setPlayUrl:self.videoPath];
     [self.view addSubview:playerController.videoView];
 }
+
+#pragma mark - FFControlerDelegate
+-(void)onPlayTime:(double)playTime totalSeconds:(double)totalSeconds
+{
+
+}
 @end

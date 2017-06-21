@@ -57,11 +57,11 @@
 		C95DA8701E9A6C5E00B06069 /* img_tabBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = C95DA86F1E9A6C5E00B06069 /* img_tabBarBg.png */; };
 		C95DA8721E9A70A800B06069 /* img_navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = C95DA8711E9A70A800B06069 /* img_navbar.png */; };
 		C95DA8751E9A738100B06069 /* img_mainBg.png in Resources */ = {isa = PBXBuildFile; fileRef = C95DA8741E9A738100B06069 /* img_mainBg.png */; };
+		C9A07B7B1EFAC2150065532C /* FFBlackPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E1D1621EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */; };
+		C9A07B7C1EFAC2150065532C /* FFBlackPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9E1D1621EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9AD50441E8BF7A000FC022E /* PlayListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AD50431E8BF7A000FC022E /* PlayListVC.m */; };
 		C9AD50471E8BF7B700FC022E /* UpLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AD50461E8BF7B700FC022E /* UpLoadVC.m */; };
 		C9AD504A1E8BF7C600FC022E /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AD50491E8BF7C600FC022E /* SettingVC.m */; };
-		C9E1D1651EFAC0FA00FB7EC2 /* FFBlackPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E1D1621EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */; };
-		C9E1D1661EFAC0FA00FB7EC2 /* FFBlackPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E1D1641EFAC0FA00FB7EC2 /* FFBlackPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C9A07B7C1EFAC2150065532C /* FFBlackPlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,8 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E1D1651EFAC0FA00FB7EC2 /* FFBlackPlayer.framework in Frameworks */,
-				C9E1D1661EFAC0FA00FB7EC2 /* FFBlackPlayer.framework in Frameworks */,
+				C9A07B7B1EFAC2150065532C /* FFBlackPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

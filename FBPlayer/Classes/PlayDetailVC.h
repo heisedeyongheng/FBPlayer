@@ -9,7 +9,7 @@
 #import "BaseViewController.h"
 #import "FFControler.h"
 
-@interface PlayDetailVC : BaseViewController
+@interface PlayDetailVC : BaseViewController<FFControlerDelegate>
 {
     FFControler * playerController;
     UIButton * backBtn;
