@@ -14,10 +14,13 @@
     UIView * bgView;
     UIView * frontView;
     UIImageView * clkBtn;
+    UILabel * timeLabel;
     BOOL isStartMove;
     float curProcess;
+    int totalSecond;
+    int curSecond;
 }
--(void)setProcess:(float)process;
+-(void)setProcess:(float)process totalTime:(int)total curTime:(int)cur;
 -(CGFloat)getProcess;
 @end
 

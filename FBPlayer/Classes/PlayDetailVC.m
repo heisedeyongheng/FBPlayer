@@ -13,6 +13,14 @@
 extern AppDelegate * appDelegate;
 
 @implementation ProcessView
+-(void)dealloc
+{
+    [super dealloc];
+    FREEOBJECT(bgView);
+    FREEOBJECT(frontView);
+    FREEOBJECT(clkBtn);
+    FREEOBJECT(timeLabel);
+}
 -(void)initControls
 {
     bgView = [[UIView alloc] init];
@@ -27,6 +35,13 @@ extern AppDelegate * appDelegate;
     [clkBtn.layer setMasksToBounds:YES];
     [clkBtn setBackgroundColor:[UIColor redColor]];
     [self addSubview:clkBtn];
+    
+    timeLabel = [[UILabel alloc] init];
+    [timeLabel setBackgroundColor:[UIColor clearColor]];
+    [timeLabel setFont:[UIFont systemFontOfSize:12]];
+    [timeLabel setTextColor:[UIColor whiteColor]];
+    [timeLabel setTextAlignment:NSTextAlignmentRight];
+    [self addSubview:timeLabel];
 }
 -(void)layoutSubviews
 {
@@ -37,6 +52,7 @@ extern AppDelegate * appDelegate;
     [bgView setFrame:CGRectMake(0, (self.frame.size.height - 2)/2, self.frame.size.width, 2)];
     [frontView setFrame:CGRectMake(0, (self.frame.size.height - 2)/2, self.frame.size.width*curProcess, 2)];
     [clkBtn setCenter:CGPointMake(self.frame.size.width*curProcess, self.frame.size.height/2)];
+    [timeLabel setFrame:CGRectMake(self.frame.size.width/2, self.frame.size.height/2, self.frame.size.width/2, self.frame.size.height)];
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
@@ -52,18 +68,51 @@ extern AppDelegate * appDelegate;
     UITouch * touch = [touches anyObject];
     CGPoint point = [touch locationInView:self];
     if(isStartMove){
-        curProcess = point.x/self.frame.size.width;
+        [clkBtn setCenter:CGPointMake(point.x, self.frame.size.height/2)];
+        [frontView setFrame:CGRectMake(0, (self.frame.size.height - 2)/2, point.x, 2)];
     }
 }
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     isStartMove = NO;
+    UITouch * touch = [touches anyObject];
+    CGPoint point = [touch locationInView:self];
+    curProcess = point.x/self.frame.size.width;
     [self layoutSubviews];
 }
--(void)setProcess:(float)process
+-(void)setProcess:(float)process totalTime:(int)total curTime:(int)cur
 {
-    curProcess = process;
-    [self layoutSubviews];
+    if(process - curProcess > 0.01){
+        curProcess = process;
+        if(isStartMove == NO){
+            [self layoutSubviews];
+        }
+    }
+    if(cur - curSecond > 1){
+        curSecond = cur;
+        totalSecond = total;
+        int cHourt = curSecond/3600;
+        int cMinute = (curSecond%3600)/60;
+        int cSec = (curSecond%3600)%60;
+        int tHourt = totalSecond/3600;
+        int tMinute = (totalSecond%3600)/60;
+        int tSec = (totalSecond%3600)%60;
+        NSString * tStr = nil;
+        NSString * cStr = nil;
+        if(tHourt > 0){
+            tStr = [NSString stringWithFormat:@"%02d:%02d:%02d",tHourt,tMinute,tSec];
+        }
+        else{
+            tStr = [NSString stringWithFormat:@"%02d:%02d",tMinute,tSec];
+        }
+        if(cHourt > 0){
+            cStr = [NSString stringWithFormat:@"%02d:%02d:%02d",cHourt,cMinute,cSec];
+        }
+        else{
+            cStr = [NSString stringWithFormat:@"%02d:%02d",cMinute,cSec];
+        }
+        [timeLabel setText:[NSString stringWithFormat:@"%@/%@",cStr,tStr]];
+    }
 }
 -(CGFloat)getProcess
 {
@@ -183,6 +232,6 @@ extern AppDelegate * appDelegate;
 -(void)onPlayTime:(double)playTime totalSeconds:(double)totalSeconds
 {
     float percent = playTime/totalSeconds;
-    [processView setProcess:percent];
+    [processView setProcess:percent totalTime:totalSeconds curTime:playTime];
 }
 @end
