@@ -26,5 +26,6 @@
 -(void)setBaseBg:(UIImage*)bg;
 -(UIImage*)getBaseBg;
 -(CGFloat)mainH;
+-(void)backAction:(UIButton*)btn;
 +(NSUInteger)Orientation;
 @end

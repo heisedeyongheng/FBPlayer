@@ -389,7 +389,7 @@ extern AppDelegate * appDelegate;
     else
     {
         if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0f) {
-            [self dismissViewControllerAnimated:YES completion:NO];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
         else
             [self dismissModalViewControllerAnimated:YES];
