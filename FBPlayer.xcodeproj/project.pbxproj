@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1865B2611F2C6C9700F3B7C4 /* baidumobadsdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1865B25F1F2C6C9700F3B7C4 /* baidumobadsdk.bundle */; };
+		1865B2621F2C6C9700F3B7C4 /* BaiduMobAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1865B2601F2C6C9700F3B7C4 /* BaiduMobAdSDK.framework */; };
 		18B7B9B91E9B38F900E956D3 /* img_my_hig.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B7B9B11E9B38F900E956D3 /* img_my_hig.png */; };
 		18B7B9BA1E9B38F900E956D3 /* img_my_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B7B9B21E9B38F900E956D3 /* img_my_nor.png */; };
 		18B7B9BB1E9B38F900E956D3 /* img_tran_hig.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B7B9B31E9B38F900E956D3 /* img_tran_hig.png */; };
@@ -80,6 +82,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1865B25F1F2C6C9700F3B7C4 /* baidumobadsdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = baidumobadsdk.bundle; sourceTree = "<group>"; };
+		1865B2601F2C6C9700F3B7C4 /* BaiduMobAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMobAdSDK.framework; sourceTree = "<group>"; };
 		18B7B9B11E9B38F900E956D3 /* img_my_hig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_my_hig.png; sourceTree = "<group>"; };
 		18B7B9B21E9B38F900E956D3 /* img_my_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_my_nor.png; sourceTree = "<group>"; };
 		18B7B9B31E9B38F900E956D3 /* img_tran_hig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_tran_hig.png; sourceTree = "<group>"; };
@@ -185,15 +189,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9897ED61EFC07D600BD461E /* FFBlackPlayer.framework in Frameworks */,
+				1865B2621F2C6C9700F3B7C4 /* BaiduMobAdSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1865B25E1F2C6C9700F3B7C4 /* BDAd */ = {
+			isa = PBXGroup;
+			children = (
+				1865B25F1F2C6C9700F3B7C4 /* baidumobadsdk.bundle */,
+				1865B2601F2C6C9700F3B7C4 /* BaiduMobAdSDK.framework */,
+			);
+			path = BDAd;
+			sourceTree = "<group>";
+		};
 		18B7B9C11E9B5F7D00E956D3 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				1865B25E1F2C6C9700F3B7C4 /* BDAd */,
 				C9158A5C1EA34A0000F33ED0 /* FFBlackPlayer */,
 				18B7B9C21E9B5F7D00E956D3 /* HttpServer */,
 			);
@@ -512,6 +527,7 @@
 				18B7B9BD1E9B38F900E956D3 /* img_video_hig.png in Resources */,
 				18B7BA1D1E9B5F7D00E956D3 /* README.txt in Resources */,
 				18B7B9BC1E9B38F900E956D3 /* img_tran_nor.png in Resources */,
+				1865B2611F2C6C9700F3B7C4 /* baidumobadsdk.bundle in Resources */,
 				C93DCBC61E8AA5C8001E7A44 /* Assets.xcassets in Resources */,
 				18B7BA151E9B5F7D00E956D3 /* About.txt in Resources */,
 				C95DA8721E9A70A800B06069 /* img_navbar.png in Resources */,
@@ -683,6 +699,7 @@
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/-iphoneos",
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/-iphonesimulator",
+					"$(PROJECT_DIR)/FBPlayer/Third/BDAd",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)/FFBlackPlayer.framework/Headers";
 				INFOPLIST_FILE = FBPlayer/Info.plist;
@@ -709,6 +726,7 @@
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/-iphoneos",
 					"$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/-iphonesimulator",
+					"$(PROJECT_DIR)/FBPlayer/Third/BDAd",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FBPlayer/Third/FFBlackPlayer/$(EFFECTIVE_PLATFORM_NAME)/FFBlackPlayer.framework/Headers";
 				INFOPLIST_FILE = FBPlayer/Info.plist;
