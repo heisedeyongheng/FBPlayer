@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BDAdTool.h"
 #import "Contast.h"
 
 #define NAVBARBG        2000

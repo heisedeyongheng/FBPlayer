@@ -137,6 +137,15 @@ extern AppDelegate * appDelegate;
     [mainTable setDelegate:self];
     [mainTable setDataSource:self];
     [self.view addSubview:mainTable];
+    
+    [self initAdView];
+}
+-(void)initAdView
+{
+    BaiduMobAdView * adView = [[BDAdTool shareInstance] barAdView];
+    [adView setFrame:CGRectMake(0, 100, self.view.frame.size.width, 40)];
+    [self.view addSubview:adView];
+    [adView start];
 }
 #pragma mark UITableViewDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
